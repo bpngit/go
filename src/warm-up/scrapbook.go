@@ -32,7 +32,7 @@ for j:=7; j<=9;j++{
 k:=0;
 for k<3 {
     fmt.Println("value of k =>", k)
-    k++ // loop does not terminate if the value of k is not encremented but program compiles.
+   // k++ // loop does not terminate if the value of k is not incremented.
 }
 
 for {
