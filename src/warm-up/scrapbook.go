@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"runtime"
 )
 
 var scala, java, python bool
@@ -90,6 +91,28 @@ func main() {
 	fmt.Println("Check type of var by using %T")
 	fmt.Printf("h is of type %T\n", h)
 	fmt.Printf("k is of type %T\n", l)
+
+	//switch statement
+	switch os := runtime.GOOS; os {
+	case "darwin":
+		fmt.Println("OS X")
+	case "linux":
+		fmt.Println("Linux")
+	default:
+		fmt.Println("%s,", os)
+	}
+	// pointers
+
+	aa, bb := 42, 2701
+	fmt.Println(bb)
+	p := &aa        // pointer of i
+	fmt.Println(*p) // pointer of P which has pointer of i
+	*p = 21         // p's pointer is 21 now
+	fmt.Println(aa)
+	p = &bb      // point to bb
+	*p = *p / 37 // divide bb through the pointer
+	fmt.Println(bb)
+
 }
 
 func g() string {

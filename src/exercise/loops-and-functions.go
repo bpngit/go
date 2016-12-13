@@ -11,7 +11,7 @@ func main() {
 
 // Newton's formula to get sqrt.
 const epsilon = .000000005 // a value which defines the threashold
-const initial = 10.0
+const initial = 1.0
 
 func Sqrt(x float64) (int, float64) {
 	result := initial
